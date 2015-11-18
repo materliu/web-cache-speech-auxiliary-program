@@ -37,6 +37,9 @@ router.get('/', async (req, res, next) => {
     } else {
       const source = await fs.readFile(fileName, { encoding: 'utf8' });
       const content = parseJade(path, source);
+
+      console.log(content);
+
       res.status(200).send(content);
     }
   } catch (err) {

@@ -15,12 +15,12 @@ class Header extends Component {
         <div className="Header-container">
           <a className="Header-brand" href="/" onClick={Link.handleClick}>
             <img className="Header-brandImg" src={require('./logo-small.png')} width="38" height="38" alt="React" />
-            <span className="Header-brandTxt">Your Company</span>
+            <span className="Header-brandTxt">演示</span>
           </a>
           <Navigation className="Header-nav" />
           <div className="Header-banner">
-            <h1 className="Header-bannerTitle">React</h1>
-            <p className="Header-bannerDesc">Complex web apps made easy</p>
+            <h1 className="Header-bannerTitle">Cache</h1>
+            <p className="Header-bannerDesc">前端缓存那些事儿</p>
           </div>
         </div>
       </div>

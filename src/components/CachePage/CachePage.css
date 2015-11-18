@@ -1,0 +1,17 @@
+/* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
+
+@import '../variables.css';
+
+.CachePage-container {
+  margin: 0 auto;
+  padding: 0 0 40px;
+  max-width: var(--max-content-width);
+}
+
+.CachePage-container img {
+
+  margin-left: 40px;
+  width: 200px;
+  height: 150px;
+
+}

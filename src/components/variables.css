@@ -17,7 +17,10 @@
    * Typography
    * ======================================================================== */
 
-  --font-family-base:      'Segoe UI', 'HelveticaNeue-Light', sans-serif;
+  /*
+   * 字体相关知识: http://www.ruanyifeng.com/blog/2014/07/chinese_fonts.html
+   */
+  --font-family-base:      'Hiragino Sans GB', "华文细黑", "微软雅黑", 'Segoe UI', 'HelveticaNeue-Light', sans-serif;
 
   /*
    * Layout

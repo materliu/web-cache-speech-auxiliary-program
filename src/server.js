@@ -15,7 +15,19 @@ server.set('port', port);
 //
 // Register Node.js middleware
 // -----------------------------------------------------------------------------
-server.use(express.static(path.join(__dirname, 'public')));
+const publicPath = path.join(__dirname, 'public');
+
+const picHeaderMap = {
+  '/minions-1.jpg': 'no-store',
+  '/minions-2.jpg': 'no-cache',
+  '/minions-3.jpg': 'max-age=31536000',
+  '/minions-4.jpg': ''
+};
+
+server.use(express.static(publicPath, {setHeaders: function (res, path, stat) {
+  console.log(path);
+  //picHeaderMap[i] && res.set('Cache-Control', picHeaderMap[i]);
+}}));
 
 //
 // Register API middleware
