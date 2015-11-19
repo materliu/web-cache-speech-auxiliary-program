@@ -24,7 +24,7 @@ const router = new Router(on => {
 
   on('/register', async () => <RegisterPage />);
 
-  on('/http-cache', async () => <CachePage />);
+  on('/http-cache', async () => <CachePage title="http-cache"/>);
 
   on('*', async (state) => {
     const content = await http.get(`/api/content?path=${state.path}`);

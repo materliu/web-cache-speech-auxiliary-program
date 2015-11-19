@@ -8,8 +8,6 @@ import withStyles from '../../decorators/withStyles';
 class CachePage extends Component {
 
   static propTypes = {
-    path: PropTypes.string.isRequired,
-    content: PropTypes.string.isRequired,
     title: PropTypes.string,
   };
 

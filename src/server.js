@@ -18,15 +18,18 @@ server.set('port', port);
 const publicPath = path.join(__dirname, 'public');
 
 const picHeaderMap = {
-  '/minions-1.jpg': 'no-store',
-  '/minions-2.jpg': 'no-cache',
-  '/minions-3.jpg': 'max-age=31536000',
-  '/minions-4.jpg': ''
+  'minions-1.jpg': 'no-store',
+  'minions-2.jpg': 'no-cache',
+  'minions-3.jpg': 'max-age=31536000',
+  'minions-4.jpg': ''
 };
 
-server.use(express.static(publicPath, {setHeaders: function (res, path, stat) {
-  console.log(path);
-  //picHeaderMap[i] && res.set('Cache-Control', picHeaderMap[i]);
+server.use(express.static(publicPath, {setHeaders (res, filepath, stat) {
+
+  let baseName = path.basename(filepath);
+
+  picHeaderMap[baseName] && res.set('Cache-Control', picHeaderMap[baseName]);
+
 }}));
 
 //
