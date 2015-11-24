@@ -42,7 +42,6 @@ class CachePage extends Component {
                 <dt><a href="http://www.browsersync.io/">No Cache-Control</a></dt>
                 <dd>http RFC 中说在server 返回头中没有 cache control 和 expires 信息时， 浏览器有权利自主决定到底用什么缓存策略， 一般是LM-Factor 算法</dd>
               </dl>
-              <img src={require('./minions-4.jpg')} alt=""/><span>minions-4.jpg</span>
             </div>
             <div>
               <h3>Fork me on GitHub</h3>
@@ -54,6 +53,13 @@ class CachePage extends Component {
         </div>
       </div>
     );
+  }
+
+
+  componentDidMount() {
+    if (window.location.href.search(/3000/gi) !== -1) {
+      window.location.href = 'http://localhost:5000/http-cache';
+    }
   }
 
 }

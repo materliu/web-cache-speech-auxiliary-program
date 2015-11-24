@@ -30,7 +30,6 @@ class ContentPage extends Component {
       </div>
     );
   }
-
 }
 
 export default ContentPage;

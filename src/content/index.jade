@@ -4,14 +4,16 @@ component: ContentPage
 ---
 div
   div
-    h3 Runtime Components
+    h3 Cache 分类
     dl
-      dt <a href="https://facebook.github.io/react/">React</a>
-      dd A JavaScript library for building user interfaces, developed by Facebook
-      dt <a href="http://facebook.github.io/flux/">Flux</a>
-      dd Application architecture for building user interfaces
+      dt
+        a(href="http://localhost:5000/http-cache") Http Cache
+      dd 利用Http Header来控制浏览器应该如何缓存资源
+      dt
+        a(href="http://localhost:5000/manifest") Manifest
+      dd 利用Manifest新标准来通知浏览器缓存资源
   div
-    h3 Development Tools
+    h3 JS编译器Cache
     dl
       dt <a href="http://webpack.github.io/">Webpack</a>
       dd Compiles front-end source code into modules / bundles
