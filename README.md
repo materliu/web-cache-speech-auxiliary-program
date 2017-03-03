@@ -164,3 +164,6 @@ file. The documentation to the project is licensed under the
 
 ---
 Made with ♥ by Konstantin Tarkus ([@koistya](https://twitter.com/koistya)) and [contributors](https://github.com/kriasoft/react-starter-kit/graphs/contributors)
+
+### 注意点
+访问5000端口，而不是3000端口

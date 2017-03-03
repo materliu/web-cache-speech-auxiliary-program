@@ -28,6 +28,7 @@ server.use(express.static(publicPath, {setHeaders (res, filepath, stat) {
 
   let baseName = path.basename(filepath);
 
+  console.log(picHeaderMap[baseName]);
   picHeaderMap[baseName] && res.set('Cache-Control', picHeaderMap[baseName]);
 
 }}));
